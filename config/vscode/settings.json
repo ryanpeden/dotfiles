@@ -1,0 +1,24 @@
+{
+    "editor.fontFamily": "Source Code Pro",
+    "editor.rulers": [
+        100
+    ],
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.ipynb_checkpoints": true,
+        "**/.pytest_cache": true,
+        "**/.ruff_cache": true,
+        "**/__pycache__": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "notebook.lineNumbers": "on",
+    "python.analysis.typeCheckingMode": "standard",
+    "python.defaultInterpreterPath": "~/.venv/bin/python",
+    "python.terminal.activateEnvironment": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.defaultLocation": "editor",
+    "workbench.startupEditor": "none"
+}

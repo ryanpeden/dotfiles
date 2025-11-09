@@ -1,0 +1,5 @@
+[user]
+    name = Ryan Peden
+    email = ryan.peden@gmail.com
+[init]
+    defaultBranch = main

@@ -1,0 +1,26 @@
+- defaults:
+    link:
+      relink: true
+      force: true
+
+- create:
+    ~/.config/ruff:
+      mode: 0755
+
+- link:
+    ~/.config/ruff/ruff.toml: config/ruff/ruff.toml
+    ~/.gitconfig: config/git/gitconfig
+    ~/.tmux.conf: config/tmux/tmux.conf
+    ~/.vimrc: config/vim/vimrc
+    ~/.zshrc: config/zsh/zshrc
+    "~/Library/Application Support/Code/User/settings.json": config/vscode/settings.json
+
+- shell:
+    - command: ./scripts/setup_homebrew.sh
+      description: Installing Homebrew packages
+    - command: ./scripts/setup_python.sh
+      description: Setting up Python environment
+    - command: ./scripts/setup_macos.sh
+      description: Configuring macOS defaults
+
+- clean: ['~']
