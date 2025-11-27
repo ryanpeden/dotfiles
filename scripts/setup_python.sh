@@ -12,7 +12,7 @@ VENV="$HOME/.venv"
 REQUIREMENTS="$(dirname "$0")/../packages/requirements.txt"
 
 for package in $PIPX_PACKAGES; do
-    pipx install --force $package
+    pipx upgrade --install "$package"
 done
 
 if [ ! -d "$VENV" ]; then
@@ -20,4 +20,7 @@ if [ ! -d "$VENV" ]; then
 fi
 
 "$VENV/bin/python" -m pip install --upgrade pip
-"$VENV/bin/pip" install -r "$REQUIREMENTS"
+
+if [ -f "$REQUIREMENTS" ]; then
+    "$VENV/bin/pip" install --upgrade -r "$REQUIREMENTS"
+fi

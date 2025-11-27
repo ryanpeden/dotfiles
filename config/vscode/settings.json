@@ -1,5 +1,7 @@
 {
+    "C_Cpp.clang_format_style": "Google",
     "editor.fontFamily": "Source Code Pro",
+    "editor.formatOnSave": true,
     "editor.rulers": [
         100
     ],
@@ -15,10 +17,19 @@
     "files.trimTrailingWhitespace": true,
     "notebook.lineNumbers": "on",
     "python.analysis.typeCheckingMode": "standard",
-    "python.defaultInterpreterPath": "~/.venv/bin/python",
+    "python.defaultInterpreterPath": "/Users/ryanpeden/.venv/bin/python",
     "python.terminal.activateEnvironment": false,
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.defaultLocation": "editor",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        }
+    }
 }
