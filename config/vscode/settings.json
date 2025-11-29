@@ -15,7 +15,6 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
-    "notebook.lineNumbers": "on",
     "python.analysis.typeCheckingMode": "standard",
     "python.defaultInterpreterPath": "/Users/ryanpeden/.venv/bin/python",
     "python.terminal.activateEnvironment": false,
