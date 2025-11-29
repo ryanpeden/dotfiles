@@ -1,3 +1,4 @@
+brew "dockutil"
 brew "gcc"
 brew "git"
 brew "grep"
