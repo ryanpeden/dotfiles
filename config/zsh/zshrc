@@ -9,6 +9,7 @@ path=(
 )
 
 export EDITOR='vim'
+export LC_COLLATE=C
 export PYTHONBREAKPOINT=ipdb.set_trace
 
 if type brew &>/dev/null; then
@@ -39,12 +40,7 @@ alias gl='git log'
 alias gs='git status'
 alias gst='git stash'
 
-autoload -Uz colors && colors
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 
-parse_git_branch() {
-    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/ (\1)/p'
-}
-
-setopt PROMPT_SUBST
-export PROMPT='%F{green}%n%f@%F{cyan}%m%f:%F{yellow}%~%f%F{magenta}$(parse_git_branch)%f %F{white}$%f '
+source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

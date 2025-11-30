@@ -2,11 +2,6 @@
 
 set -e
 
-if ! command -v brew &> /dev/null; then
-    echo "Error: Homebrew is not installed"
-    exit 1
-fi
-
 BREWFILE="$(dirname "$0")/../packages/Brewfile"
 
 brew update

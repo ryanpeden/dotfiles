@@ -16,6 +16,7 @@
     ~/.gitconfig: config/git/gitconfig
     ~/.jupyter/lab/user-settings/@jupyterlab/apputils-extension/themes.jupyterlab-settings: config/jupyter/lab/user-settings/@jupyterlab/apputils-extension/themes.jupyterlab-settings
     ~/.jupyter/lab/user-settings/@jupyterlab/notebook-extension/tracker.jupyterlab-settings: config/jupyter/lab/user-settings/@jupyterlab/notebook-extension/tracker.jupyterlab-settings
+    ~/.p10k.zsh: config/zsh/p10k.zsh
     ~/.tmux.conf: config/tmux/tmux.conf
     ~/.vimrc: config/vim/vimrc
     ~/.zshrc: config/zsh/zshrc
