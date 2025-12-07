@@ -27,6 +27,8 @@
       description: Installing Homebrew packages
     - command: ./scripts/setup_python.sh
       description: Setting up Python environment
+    - command: ./scripts/setup_vim.sh
+      description: Setting up Vim plugins
     - command: ./scripts/setup_macos.sh
       description: Configuring macOS defaults
 

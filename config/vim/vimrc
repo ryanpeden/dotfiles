@@ -1,3 +1,18 @@
+" Plugins
+
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'preservim/nerdtree'
+call plug#end()
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+" Options
+
+syntax on
+
 set backspace=indent,eol,start
 set cursorline
 set expandtab
@@ -14,4 +29,6 @@ set splitbelow
 set splitright
 set tabstop=4
 
-syntax on
+" Mappings
+
+nnoremap <C-n> :NERDTreeToggle<CR>
