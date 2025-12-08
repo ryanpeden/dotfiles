@@ -31,6 +31,8 @@
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # os_icon               # os identifier
+    context                 # user@hostname
+    virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
     dir                     # current directory
     vcs                     # git status
     prompt_char             # prompt symbol
@@ -46,7 +48,6 @@
     background_jobs         # presence of background jobs
     direnv                  # direnv status (https://direnv.net/)
     asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
-    virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
     anaconda                # conda environment (https://conda.io/)
     pyenv                   # python environment (https://github.com/pyenv/pyenv)
     goenv                   # go environment (https://github.com/syndbg/goenv)
@@ -920,8 +921,13 @@
   typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_WITH_PYENV=false
   # Separate environment name from Python version only with a space.
   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
-  # Custom icon.
-  # typeset -g POWERLEVEL9K_VIRTUALENV_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  # Show actual virtualenv name (.venv) instead of parent directory name.
+  typeset -g POWERLEVEL9K_VIRTUALENV_GENERIC_NAMES=()
+  # Add parentheses around virtualenv name.
+  typeset -g POWERLEVEL9K_VIRTUALENV_PREFIX='('
+  typeset -g POWERLEVEL9K_VIRTUALENV_SUFFIX=')'
+  # Hide the Python icon.
+  typeset -g POWERLEVEL9K_VIRTUALENV_VISUAL_IDENTIFIER_EXPANSION=''
 
   #####################[ anaconda: conda environment (https://conda.io/) ]######################
   # Anaconda environment color.
