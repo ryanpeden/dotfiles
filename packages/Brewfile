@@ -1,3 +1,4 @@
+brew "bat"
 brew "dockutil"
 brew "gcc"
 brew "git"
