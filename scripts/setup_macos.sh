@@ -55,20 +55,14 @@ DOCK_APPS=(
     "/System/Applications/System Settings.app"
 )
 
-DOCK_FOLDERS=(
-    "$HOME/work"
-    "$HOME/Downloads"
-)
-
 dockutil --remove all --no-restart
 
 for app in "${DOCK_APPS[@]}"; do
     [[ -d "$app" ]] && dockutil --add "$app" --no-restart
 done
 
-for folder in "${DOCK_FOLDERS[@]}"; do
-    [[ -d "$folder" ]] && dockutil --add "$folder" --view list --display folder --no-restart
-done
+[[ -d "$HOME/work" ]] && dockutil --add "$HOME/work" --view list --display folder --sort name --no-restart
+[[ -d "$HOME/Downloads" ]] && dockutil --add "$HOME/Downloads" --view auto --display stack --sort datemodified --no-restart
 
 # ==============================================================================
 # Restart
