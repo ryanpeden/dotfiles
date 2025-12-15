@@ -16,6 +16,7 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Trackpad
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write -g com.apple.trackpad.scaling -float 2.5
 
 # Finder
 defaults write -g AppleShowAllExtensions -bool true
