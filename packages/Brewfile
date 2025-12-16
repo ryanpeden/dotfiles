@@ -1,4 +1,5 @@
 brew "bat"
+brew "boost"
 brew "dockutil"
 brew "gcc"
 brew "git"
