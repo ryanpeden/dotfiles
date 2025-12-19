@@ -37,13 +37,14 @@ compinit -i
 
 alias ..='cd ..'
 alias ...='cd ../..'
-alias e='vim'
-alias grep='grep --color=auto'
+alias e='code'
 alias g='grep'
+alias grep='grep --color=auto'
 alias l='ls -lah'
 alias p='pwd -P'
 alias rl='readlink'
 alias rm='rm -i'
+alias v='vim'
 
 alias ga='git add'
 alias gb='git branch'
@@ -51,6 +52,7 @@ alias gc='git commit'
 alias gco='git checkout'
 alias gd='git diff'
 alias gdh='git diff HEAD'
+alias gg='git grep'
 alias gl='git log'
 alias gs='git status'
 alias gst='git stash'
@@ -58,4 +60,4 @@ alias gst='git stash'
 # Theme
 
 source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
