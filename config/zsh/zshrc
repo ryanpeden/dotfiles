@@ -19,6 +19,7 @@ export LC_COLLATE=C
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 
 export EDITOR='vim'
+export LESS="-FR"
 
 export PYTHONBREAKPOINT=ipdb.set_trace
 
