@@ -18,12 +18,8 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 defaults write -g com.apple.trackpad.scaling -float 2.5
 
-# Finder
-defaults write -g AppleShowAllExtensions -bool true
-defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-defaults write com.apple.finder NewWindowTarget -string "PfLo"
-defaults write com.apple.finder NewWindowTargetPath -string "file://$HOME/work/"
-defaults write com.apple.finder ShowPathbar -bool true
+# Mouse
+defaults write -g com.apple.mouse.scaling -float 2.5
 
 # Dock
 defaults write com.apple.dock launchanim -bool false
@@ -38,6 +34,16 @@ defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
 defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
 defaults write -g PMPrintingExpandedStateForPrint -bool true
 defaults write -g PMPrintingExpandedStateForPrint2 -bool true
+
+# Finder
+defaults write -g AppleShowAllExtensions -bool true
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+defaults write com.apple.finder NewWindowTarget -string "PfLo"
+defaults write com.apple.finder NewWindowTargetPath -string "file://$HOME/work/"
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Scroll Reverser
+defaults write com.pilotmoon.scroll-reverser ReverseMouse -bool true
 
 # ==============================================================================
 # Dock
