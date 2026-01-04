@@ -72,6 +72,20 @@ done
 [[ -d "$HOME/Downloads" ]] && dockutil --add "$HOME/Downloads" --view auto --display stack --sort datemodified --no-restart
 
 # ==============================================================================
+# Login Items
+# ==============================================================================
+
+LOGIN_ITEMS=(
+    "/Applications/Google Drive.app"
+    "/Applications/Rectangle.app"
+    "/Applications/Scroll Reverser.app"
+)
+
+for app in "${LOGIN_ITEMS[@]}"; do
+    osascript -e "tell application \"System Events\" to make login item at end with properties {path:\"${app}\", hidden:false}" 2>/dev/null || true
+done
+
+# ==============================================================================
 # Restart
 # ==============================================================================
 
