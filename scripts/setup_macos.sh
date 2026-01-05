@@ -51,14 +51,15 @@ defaults write com.pilotmoon.scroll-reverser ReverseMouse -bool true
 
 DOCK_APPS=(
     "/Applications/Google Chrome.app"
+    "/System/Applications/Messages.app"
     "/System/Applications/Notes.app"
-    "/Applications/Spotify.app"
-    "/System/Applications/Podcasts.app"
-    "/System/Applications/Photos.app"
+    "/Applications/Citrix Workspace.app"
     "/Applications/Visual Studio Code.app"
     "/System/Applications/Utilities/Terminal.app"
     "/Applications/zoom.us.app"
-    "/Applications/Citrix Workspace.app"
+    "/Applications/Spotify.app"
+    "/System/Applications/Podcasts.app"
+    "/System/Applications/Photos.app"
     "/System/Applications/System Settings.app"
 )
 
