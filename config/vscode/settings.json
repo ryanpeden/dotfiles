@@ -23,6 +23,8 @@
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.defaultLocation": "editor",
+    "vim.smartRelativeLine": true,
+    "vim.useSystemClipboard": true,
     "workbench.startupEditor": "none",
     "[cpp]": {
         "editor.defaultFormatter": "ms-vscode.cpptools"
