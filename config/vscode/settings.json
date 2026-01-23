@@ -1,5 +1,6 @@
 {
     "C_Cpp.clang_format_style": "Google",
+    "claudeCode.preferredLocation": "panel",
     "editor.fontFamily": "Source Code Pro",
     "editor.formatOnSave": true,
     "editor.rulers": [
@@ -7,6 +8,7 @@
     ],
     "files.exclude": {
         "**/.DS_Store": true,
+        "**/.claude": true,
         "**/.ipynb_checkpoints": true,
         "**/.pytest_cache": true,
         "**/.ruff_cache": true,
