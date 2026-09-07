@@ -1,8 +1,14 @@
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Homebrew
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+[[ -x /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Path
+
+typeset -U path
 
 path=(
     ~/.local/bin
@@ -18,7 +24,7 @@ export CLICOLOR=1
 export LC_COLLATE=C
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 
-export EDITOR='vim'
+export EDITOR=vim
 export LESS="-FR"
 
 export PYTHONBREAKPOINT=ipdb.set_trace
@@ -29,7 +35,9 @@ export PYTHONBREAKPOINT=ipdb.set_trace
 
 # Completions
 
-fpath=($(brew --prefix)/share/zsh-completions $fpath)
+typeset -U fpath
+
+[[ -n $HOMEBREW_PREFIX ]] && fpath=($HOMEBREW_PREFIX/share/zsh-completions $fpath)
 
 autoload -Uz compinit
 compinit -i
@@ -38,14 +46,13 @@ compinit -i
 
 alias ..='cd ..'
 alias ...='cd ../..'
-alias e='code'
+alias e='vim'
 alias g='grep'
 alias grep='grep --color=auto'
 alias l='ls -lah'
 alias p='pwd -P'
 alias rl='readlink'
 alias rm='rm -i'
-alias v='vim'
 
 alias ga='git add'
 alias gb='git branch'
@@ -60,5 +67,7 @@ alias gst='git stash'
 
 # Theme
 
-source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+if [[ -r $HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme ]]; then
+    source $HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme
+fi
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh

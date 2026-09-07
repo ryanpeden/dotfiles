@@ -4,3 +4,9 @@
 
 [init]
     defaultBranch = main
+
+[fetch]
+    prune = true
+
+[diff]
+    algorithm = histogram

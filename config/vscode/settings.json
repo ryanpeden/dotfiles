@@ -18,7 +18,7 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "python.analysis.typeCheckingMode": "standard",
-    "python.defaultInterpreterPath": "/Users/ryanpeden/.venv/bin/python",
+    "python.defaultInterpreterPath": "${userHome}/.venv/bin/python",
     "python.terminal.activateEnvironment": false,
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.cursorStyle": "line",

@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 
-set -e
+set -euo pipefail
+
+command -v dockutil >/dev/null 2>&1
 
 # ==============================================================================
 # Defaults
@@ -83,13 +85,13 @@ LOGIN_ITEMS=(
 )
 
 for app in "${LOGIN_ITEMS[@]}"; do
-    osascript -e "tell application \"System Events\" to make login item at end with properties {path:\"${app}\", hidden:false}" 2>/dev/null || true
+    [[ -d "$app" ]] && osascript -e "tell application \"System Events\" to make login item at end with properties {path:\"$app\", hidden:false}" || true
 done
 
 # ==============================================================================
 # Restart
 # ==============================================================================
 
-killall cfprefsd
-killall Dock
-killall Finder
+killall cfprefsd || true
+killall Dock || true
+killall Finder || true

@@ -1,14 +1,11 @@
 #!/usr/bin/env zsh
 
-set -e
+set -euo pipefail
 
 BREWFILE="$(dirname "$0")/../packages/Brewfile"
 
+command -v brew >/dev/null 2>&1
+[ -f "$BREWFILE" ]
+
 brew update
-
-if [ -f "$BREWFILE" ]; then
-    brew bundle --file="$BREWFILE" --cleanup
-fi
-
-brew upgrade
-brew cleanup
+brew bundle --file="$BREWFILE" --force-cleanup

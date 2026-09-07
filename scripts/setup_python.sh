@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-set -e
+set -euo pipefail
 
 PIPX_PACKAGES=(
     mypy
@@ -11,16 +11,17 @@ PIPX_PACKAGES=(
 VENV="$HOME/.venv"
 REQUIREMENTS="$(dirname "$0")/../packages/requirements.txt"
 
-for package in $PIPX_PACKAGES; do
+command -v pipx >/dev/null 2>&1
+command -v python3.13 >/dev/null 2>&1
+[ -f "$REQUIREMENTS" ]
+
+for package in "${PIPX_PACKAGES[@]}"; do
     pipx upgrade --install "$package"
 done
 
 if [ ! -d "$VENV" ]; then
-    python3 -m venv "$VENV"
+    python3.13 -m venv "$VENV"
 fi
 
 "$VENV/bin/python" -m pip install --upgrade pip
-
-if [ -f "$REQUIREMENTS" ]; then
-    "$VENV/bin/pip" install --upgrade -r "$REQUIREMENTS"
-fi
+"$VENV/bin/python" -m pip install --upgrade -r "$REQUIREMENTS"

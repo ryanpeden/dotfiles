@@ -2,25 +2,26 @@
     link:
       relink: true
       force: true
-
-- create:
-    ~/.config/ruff:
-      mode: 0755
-    ~/.jupyter/lab/user-settings/@jupyterlab/apputils-extension:
-      mode: 0755
-    ~/.jupyter/lab/user-settings/@jupyterlab/notebook-extension:
-      mode: 0755
+      backup: true
 
 - link:
-    ~/.config/ruff/ruff.toml: config/ruff/ruff.toml
+    ~/.config/ruff/ruff.toml:
+      create: true
+      path: config/ruff/ruff.toml
     ~/.gitconfig: config/git/gitconfig
-    ~/.jupyter/lab/user-settings/@jupyterlab/apputils-extension/themes.jupyterlab-settings: config/jupyter/lab/user-settings/@jupyterlab/apputils-extension/themes.jupyterlab-settings
-    ~/.jupyter/lab/user-settings/@jupyterlab/notebook-extension/tracker.jupyterlab-settings: config/jupyter/lab/user-settings/@jupyterlab/notebook-extension/tracker.jupyterlab-settings
+    ~/.jupyter/lab/user-settings/@jupyterlab/apputils-extension/themes.jupyterlab-settings:
+      create: true
+      path: config/jupyter/lab/user-settings/@jupyterlab/apputils-extension/themes.jupyterlab-settings
+    ~/.jupyter/lab/user-settings/@jupyterlab/notebook-extension/tracker.jupyterlab-settings:
+      create: true
+      path: config/jupyter/lab/user-settings/@jupyterlab/notebook-extension/tracker.jupyterlab-settings
     ~/.p10k.zsh: config/zsh/p10k.zsh
     ~/.tmux.conf: config/tmux/tmux.conf
     ~/.vimrc: config/vim/vimrc
     ~/.zshrc: config/zsh/zshrc
-    "~/Library/Application Support/Code/User/settings.json": config/vscode/settings.json
+    "~/Library/Application Support/Code/User/settings.json":
+      create: true
+      path: config/vscode/settings.json
 
 - shell:
     - command: ./scripts/setup_homebrew.sh
